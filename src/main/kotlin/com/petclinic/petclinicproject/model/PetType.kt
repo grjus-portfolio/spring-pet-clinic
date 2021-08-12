@@ -1,5 +1,5 @@
 package com.petclinic.petclinicproject.model
 
-class PetType(var name:String) {
+class PetType(var name:String, id:Long):BaseEntity(id) {
 
 }
