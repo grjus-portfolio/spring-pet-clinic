@@ -1,9 +1,11 @@
 package com.petclinic.petclinicproject.services.map
 
 import com.petclinic.petclinicproject.model.Pet
-import com.petclinic.petclinicproject.services.CrudService
+import com.petclinic.petclinicproject.services.PetService
+import org.springframework.stereotype.Service
 
-class PetServiceMap<T:Pet, ID:Long>:AbstractMapService<Pet, Long>(), CrudService<Pet, Long> {
+@Service
+class PetServiceMap:AbstractMapService<Pet, Long>(), PetService {
     override fun save(item: Pet): Pet {
         super.save(item.id, item)
         return item

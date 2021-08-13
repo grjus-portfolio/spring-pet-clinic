@@ -1,6 +1,7 @@
 package com.petclinic.petclinicproject.services.map
 
 import com.petclinic.petclinicproject.services.CrudService
+import org.springframework.stereotype.Service
 
 abstract class AbstractMapService<T, ID>:CrudService<T,ID> {
 
