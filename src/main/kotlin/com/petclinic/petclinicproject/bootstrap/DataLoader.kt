@@ -12,16 +12,16 @@ class DataLoader(var ownerService:OwnerService,
                  var vetService:VetService
 ):CommandLineRunner {
     override fun run(vararg args: String?) {
-        val owner1 = Owner("Grzegorz","Juszkiewicz",1L)
+        val owner1 = Owner("Grzegorz","Juszkiewicz")
         ownerService.save(owner1)
 
-        val owner2 = Owner("Adam","Juszkiewicz",2L)
+        val owner2 = Owner("Adam","Juszkiewicz")
         ownerService.save(owner2)
 
-        val vet1 = Vet("Mariusz", "Wlaszczyk",1L)
+        val vet1 = Vet("Mariusz", "Wlaszczyk")
         vetService.save(vet1)
 
-        val vet2 = Vet("Mariusz", "Kielbasa",2L)
+        val vet2 = Vet("Mariusz", "Kielbasa")
         vetService.save(vet2)
     }
 }

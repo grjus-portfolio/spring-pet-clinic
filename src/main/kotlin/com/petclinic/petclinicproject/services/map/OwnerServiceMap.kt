@@ -13,7 +13,7 @@ class OwnerServiceMap
     }
 
     override fun save(item: Owner): Owner {
-        super.save(item.id, item)
+        super.save(item)
         return item
     }
 

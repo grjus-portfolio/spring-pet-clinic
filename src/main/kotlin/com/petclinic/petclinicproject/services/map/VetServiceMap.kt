@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service
 @Service
 class VetServiceMap:AbstractMapService<Vet, Long>(), VetService {
     override fun save(item: Vet): Vet {
-        super.save(item.id, item)
+        super.save(item)
         return item
     }
 
