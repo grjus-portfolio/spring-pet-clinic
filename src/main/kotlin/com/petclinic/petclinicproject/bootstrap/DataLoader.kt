@@ -1,6 +1,7 @@
 package com.petclinic.petclinicproject.bootstrap
 
 import com.petclinic.petclinicproject.model.Owner
+import com.petclinic.petclinicproject.model.Vet
 import com.petclinic.petclinicproject.services.OwnerService
 import com.petclinic.petclinicproject.services.VetService
 import org.springframework.boot.CommandLineRunner
@@ -16,5 +17,11 @@ class DataLoader(var ownerService:OwnerService,
 
         val owner2 = Owner("Adam","Juszkiewicz",2L)
         ownerService.save(owner2)
+
+        val vet1 = Vet("Mariusz", "Wlaszczyk",1L)
+        vetService.save(vet1)
+
+        val vet2 = Vet("Mariusz", "Kielbasa",2L)
+        vetService.save(vet2)
     }
 }
