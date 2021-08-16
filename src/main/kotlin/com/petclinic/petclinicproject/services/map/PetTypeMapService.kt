@@ -1,10 +1,11 @@
 package com.petclinic.petclinicproject.services.map
 
 import com.petclinic.petclinicproject.model.PetType
-import com.petclinic.petclinicproject.services.PetTypeInterface
+import com.petclinic.petclinicproject.services.PetTypeService
+import org.springframework.stereotype.Component
 
-
-class PetTypeMapService:AbstractMapService<PetType, Long>(), PetTypeInterface {
+@Component
+class PetTypeMapService:AbstractMapService<PetType, Long>(), PetTypeService {
     override fun deleteById(id: Long) {
         super.deleteByID(id)
     }
