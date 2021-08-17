@@ -1,5 +1,13 @@
 package com.petclinic.petclinicproject.model
 
-class PetType(var name:String):BaseEntity(){
+import javax.persistence.Column
+import javax.persistence.Entity
+import javax.persistence.Table
+
+@Entity
+@Table(name="types")
+class PetType(
+    @Column(name="name")
+    var name:String):BaseEntity(){
 
 }
