@@ -40,16 +40,16 @@ class DataLoader(var ownerService:OwnerService,
         var petType = PetType("cat")
         petTypeService.save(petType)
 
-//        val mikesPet = Pet(petType, owner1, LocalDate.now())
-//        println(mikesPet.owner.firstName)
-//
-//        val surgery = Speciality()
-//        surgery.description = "surgery"
-//        surgery.id = 1L
-//        val savedRadiology = specialityService.save(surgery)
-//
-//
-//        vet1.specialities.add(savedRadiology)
-//        vet1.specialities.forEach { println(it.description) }
+        val mikesPet = Pet("Woffie",petType, owner1, LocalDate.now(), HashSet<Visit>())
+        println(mikesPet.owner.firstName)
+
+        val surgery = Speciality()
+        surgery.description = "surgery"
+        surgery.id = 1L
+        val savedRadiology = specialityService.save(surgery)
+
+
+        vet1.specialities.add(savedRadiology)
+        vet1.specialities.forEach { println(it.description) }
     }
 }
