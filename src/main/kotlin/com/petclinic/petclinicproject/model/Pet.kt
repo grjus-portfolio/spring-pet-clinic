@@ -5,15 +5,18 @@ import javax.persistence.*
 
 @Entity
 @Table(name="pets")
-class Pet (
+data class Pet (
     @Column(name="name")
-    var name:String,
+    val name:String,
     @ManyToOne
     @JoinColumn(name="type_id")
-    var petType:PetType,
+    val petType:PetType,
     @ManyToOne
     @JoinColumn(name="owner_id")
-    var owner:Owner,
+    val owner:Owner,
     @Column(name="birth_date")
-    var birthDate:LocalDate):BaseEntity() {
+    val birthDate:LocalDate,
+    @OneToMany(cascade = [CascadeType.ALL], mappedBy = "pet")
+    val visits:Set<Visit> = HashSet<Visit>()
+    ):BaseEntity() {
 }
